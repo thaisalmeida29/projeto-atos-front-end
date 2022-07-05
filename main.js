@@ -36,7 +36,7 @@ function pesquisacep() {
                 .then(json => {
                     if (json.logradouro) {
                         document.getElementById('i-endereco').value = json.logradouro;
-                        document.getElementById('i-bairro').value = json.logradouro;
+                        document.getElementById('i-bairro').value = json.bairro;
                         document.getElementById('i-cidade').value = json.localidade;
                         document.getElementById('i-estado').value = json.uf;
                         document.getElementById('i-complemento').value = json.complemento;
