@@ -1,6 +1,6 @@
 ## Formulário com bootstrap e Javascript
 
-Espero que gostem do meu formulário:D
+Espero que gostem do meu formulário :D
 
 
 
@@ -16,7 +16,7 @@ Aqui um breve gif de como funciona o site de cadastro
 
 ![2022-07-05-10-21-01](https://user-images.githubusercontent.com/96269299/177338506-afe9505c-f828-4aea-ba59-d5216aa88435.gif)
 
-## :wrench: Tecnologias usadas
+## :wrench: Tecnologias utilizadas
 
 Aqui estão as tecnologias usadas neste projeto.
 
