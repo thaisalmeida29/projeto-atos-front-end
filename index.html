@@ -24,12 +24,12 @@
             <h2>Informações Pessoais</h2>
             <div class="col-sm-3">
               <label for="exampleFormControlInput1" class="form-label">Nome<span class="text-danger">*</span></label>
-              <input type="nome" class="form-control" id="i-nome" placeholder="Digite seu nome" required>
+              <input type="nome" class="form-control" id="i-nome" pattern="^[A-Za-z]" placeholder="Digite seu nome" required>
             </div>
             <div class="col-sm-3">
               <label for="exampleFormControlInput1" class="form-label">Sobrenome<span
                   class="text-danger">*</span></label>
-              <input type="sobrenome" class="form-control" id="i-sobrenome" placeholder="Digite seu sobrenome" required>
+              <input type="sobrenome" class="form-control" id="i-sobrenome" pattern="^[A-Za-z]" placeholder="Digite seu sobrenome" required>
             </div>
             <div class="col-sm-6">
               <label for="exampleFormControlInput1" class="form-label">Email<span class="text-danger">*</span></label>
@@ -81,7 +81,7 @@
             <div class="col-sm-4">
               <label for="exampleFormControlInput1" class="form-label">Academias<span
                   class="text-danger">*</span></label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" id="i-academia">
                 <option selected>Selecione</option>
                 <option value="1">.Net</option>
                 <option value="2">Java</option>
@@ -90,16 +90,16 @@
             <div class="col-sm-4">
               <label for="exampleFormControlInput1" class="form-label">Professores<span
                   class="text-danger">*</span></label>
-              <select class="form-select" aria-label="Default select example">
+              <select class="form-select" aria-label="Default select example" id="i-professor">
                 <option selected>Selecione</option>
                 <option value="1">Deivison Pasa</option>
                 <option value="2">Alexandre Zamberlan</option>
-                <option value="2">Ricardo Frohlich</option>
+                <option value="3">Ricardo Frohlich</option>
               </select>
             </div>
             <div class="form-group">
               <label for="exampleFormControlTextarea1"><b>Termos de aceito</b></label>
-              <textarea class="form-control text-bg-secondary p-3 text-dark" id="exampleFormControlTextarea1" rows="16"
+              <textarea id="i-termos-aceite" class="form-control text-bg-secondary p-3 text-dark" id="exampleFormControlTextarea1" rows="16"
                 style="resize: none">TERMO DE ACEITE PARA TRATAMENTO DE DADOS PESSOAIS
                 Este documento visa registrar a manifestação livre, informada e inequívoca pela qual o usuário concorda com o tratamento
                 de seus dados pessoais para finalidade específica, em conformidade com a Lei nº 13.709 – Lei Geral de Proteção de
@@ -157,7 +157,7 @@
             </div>
             <div class="input-group mb-3">
               <div class="input-group-prepend">
-                <input type="checkbox" id="i-aceite" aria-label="Checkbox for following text input" required>
+                <input disabled type="checkbox" id="i-aceite" aria-label="Checkbox for following text input" required>
                 <label for="exampleFormControlInput1"><b>Eu li e concordo com os termos<b></label>
               </div>
             </div>
@@ -179,13 +179,13 @@
       </section>
       <div class="d-grid gap-2 col-6 mx-auto">
         <button class="btn btn-primary" id="subm" type="submit">Salvar</button>
-        <button class="btn btn-primary" type="reset">Limpar</button>
+        <button class="btn btn-primary" id="limpar" type="reset">Limpar</button>
       </div>
       </form>
   </div>
   </main>
   <section id="tabela-dados" class="bg-white p-5 mb-5 d-none">
-    <table class="table">
+    <table class="table" id="apagar">
       <thead>
         <tr>
           <th colspan="2">Dados do formulário</th>
@@ -222,7 +222,7 @@
         </tr>
         <tr>
           <th>Complemento:</th>
-          <td id="compemento"></td>
+          <td id="complemento"></td>
         </tr>
         <tr>
           <th>Bairro:</th>
